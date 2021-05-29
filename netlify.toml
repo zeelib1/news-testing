@@ -1,0 +1,1 @@
+npm install && npm run build && node node_modules/pug-cli/index.js views/ --out ./

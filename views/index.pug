@@ -1,0 +1,134 @@
+doctype html
+head
+  meta(charset='UTF-8')
+  meta(http-equiv='X-UA-Compatible', content='IE=edge')
+  meta(name='viewport', content='width=device-width, initial-scale=1.0')
+  link(rel='stylesheet', href='./styles/style.css')
+  title Bizz
+
+// UPPER NAVBAR
+nav
+  ul.justify-start.align-middle.uppercase.font-normal(class='sm:flex')
+    img(class='w-1/4')(src='https://fair-votes.com/img/6.%20O%20NAMA/logo/index.png', alt='logo')
+    li.m-5 Naslovnica
+    li.m-5 Vijesti
+    li.m-5 Sport
+    li.m-5 Magazin
+    li.m-5 Oglasi
+    li.m-5 Ostalo
+    img.ml-auto.mr-5.align-middle.h-10.mt-3(src='https://itsa.org.uk/wp-content/uploads/2017/09/search.png')
+// INNER NAVBAR
+nav
+  ul.justify-start.align-middle.uppercase.font-normal(class='md:flex')
+    li.m-4.uppercase.font-bold.text-index.text-xl Vijesti
+    li.m-5 Hrvatska
+    li.m-5 Zagreb
+    li.m-5 Regija
+    li.m-5 EU
+    li.m-5 Svijet
+    li.m-5 Znanost
+    li.m-5 Crna Kronika
+    li.m-5 Komentari
+    li.m-5 Novac
+  hr.border-lightgray
+// MAIN BODY
+main.flex.flex-col(class='md:flex-row')
+  section.p-2.border-lightgray(class='lg:w-3/5')
+    img.mb-2(src=`${data.main[0].img}`, alt='')
+    a(href=`https://www.index.hr${data.main[0].link}` target='_blank')
+      h1
+        | #{data.main[0].title}
+    p
+      | #{data.main[0].summary}
+      
+    p.text-lightgray-darker.uppercase.mt-2 Vezane vijesti
+    hr.border-lightgray.my-2
+    p
+      | #{data.main[0].connectedNewsOne}
+    .flex.justify-between
+    hr.border-lightgray.my-2
+    p
+      | #{data.main[0].connectedNewsTwo}
+
+    .flex.justify-between
+    hr.border-lightgray.my-2
+    p
+      | #{data.main[0].connectedNewsThree}
+
+    .flex.justify-between
+      button.bg-facebook.px-4.mt-2.text-lightgray
+        span.font-bold.mr-1 &#x1D5BF;
+        |  121
+      .flex
+        img.w-8.text-lightgray-darker.bg-transparent.bg-lightgray.opacity-10.mr-1(src='https://static.thenounproject.com/png/1314304-200.png', alt='')
+        span.text-lightgray-darker 127
+  // MIDDLE SECTION
+  section.p-2.border-l-2.border-lightgray(class='lg:w-2/5')
+    img.mb-2(src=`${data.main[0].mainTopImg}`, alt='')
+    h1
+      | #{data.main[0].mainTopTitle}
+
+    // BOTTOM SECTION
+    .flex.mt-3.border-t.pt-1.border-lightgray
+      img.mr-2(src=`${data.main[0].mainBottomImgOne}`)
+      p
+        a.text-paragraph(href=`https://www.index.hr${data.main[0].mainBottomLinkOne}` target='_blank')
+          | #{data.main[0].mainBottomTitleOne}
+    .flex.mt-3.border-t.border-lightgray.pt-1
+      img.mr-2(src=`${data.main[0].mainBottomImgTwo}`, alt='')
+      p
+        a.text-paragraph(href=`https://www.index.hr${data.main[0].mainBottomLinkTwo}` target='_blank')
+          | #{data.main[0].mainBottomTitleTwo}
+
+    .flex.mt-3.border-t.border-lightgray.pt-1
+
+      img.mr-2(src=`${data.main[0].mainBottomImgThree}`, alt='')
+      p
+        a.text-paragraph(href=`https://www.index.hr${data.main[0].mainBottomLinkThree}` target='_blank')
+          | #{data.main[0].mainBottomTitleThree}
+    .flex.mt-3.border-t.border-lightgray.pt-1
+      img.mr-2(src=`${data.main[0].mainBottomImgFour}`, alt='')
+      p
+        a.text-paragraph(href=`https://www.index.hr${data.main[0].mainBottomLinkFour}` target='_blank')
+          | #{data.main[0].mainBottomTitleFour}
+    // SIDEBAR RIGHT
+  section.border-l-2.border-lightgray.p-2.flex.flex-col(class='lg:2/5')
+    article.flex.mb-3
+      .flex.flex-col.mr-3
+        span.text-index 18
+        span min
+      p.text-paragraph 
+        a.text-paragraph(href=`https://www.index.hr${data.articles[2].link}` target='_blank')
+          | #{data.articles[2].title}
+    article.flex.mb-3
+      .flex.flex-col.mr-3
+        span.text-index 18
+        span min
+      p.text-paragraph
+        a.text-paragraph(href=`https://www.index.hr${data.articles[3].link}` target='_blank')
+          | #{data.articles[3].title}
+    article.flex.mb-3
+      .flex.flex-col.mr-3
+        span.text-index 18
+        span min
+      p.text-paragraph
+         a.text-paragraph(href=`https://www.index.hr${data.articles[4].link}` target='_blank')
+          | #{data.articles[4].title}
+    article.flex.mb-3
+      .flex.flex-col.mr-3
+        span.text-index 18
+        span min
+      p.text-paragraph
+         a.text-paragraph(href=`https://www.index.hr${data.articles[5].link}` target='_blank')
+          | #{data.articles[5].title}
+    article.flex.mb-3
+      .flex.flex-col.mr-3
+        span.text-index 18
+        span min
+      p.text-paragraph
+         a.text-paragraph(href=`https://www.index.hr${data.articles[6].link}` target='_blank')
+          | #{data.articles[6].title}
+    button.text-gray.border-lightgray.text-lightgray-darker.border-2.px-12.py-3.uppercase.self-center(class='hover:text-paragraph')
+      | Prika&zcaron;i
+      | jo&scaron; vijesti
+    img.mt-2(src='https://static.criteo.net/design/dt/82887/210514/ba76789c37ae419283a27fbfa3e039ec_image_ad_480x320.png', alt='')
