@@ -3,5 +3,5 @@ Leading news portal in Croatia, built with Pug HTML Template, Tailwind CSS, Expr
 
 Currently a work in progress
 
-![index portal](https://github.com/[zeelib1]/[news-testing]/blob/[master]/index.jpg?raw=true)
+![index portal](https://github.com/zeelib1/news-testing/blob/master/index.hr.png?raw=true)
 
