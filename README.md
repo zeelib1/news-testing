@@ -1,5 +1,5 @@
 # News portal
-Leading news portal in Croatia, built with Pug HTML Template, Tailwind CSS, Express and Puppeteer
+Leading news portal in Croatia, built with Pug HTML Template, Tailwind CSS, Express and Puppeteer Web Scrapper
 
 Currently a work in progress
 
