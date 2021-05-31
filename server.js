@@ -17,9 +17,9 @@ app.use((req, res, next) => {
 
 
 app.get('/', (req, res) => {
-  const mediumArticles = new Promise((resolve, reject) => {
+  const indexArticles = new Promise((resolve, reject) => {
     scraper
-      .scrapeMedium()
+      .scrapeIndex()
       .then(data => {
         resolve(data)
         
@@ -40,7 +40,7 @@ app.get('/', (req, res) => {
   
  
 
-  Promise.all([mediumArticles,leftSidebar])
+  Promise.all([indexArticles,leftSidebar])
   
     .then(data => {
       res.render('index', { data: { articles: data[0],main: data[1]} })
